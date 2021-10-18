@@ -44,5 +44,15 @@ namespace Models.DAO
 
             }
         }
+        public bool CheckUsername(string userName)
+        {
+            return db.Users.Count(x => x.UserName == userName) > 0;
+
+        }
+        public bool Checkemai(string email)
+        {
+            return db.Users.Count(x => x.Email == email) > 0;
+
+        }
     }
 }
