@@ -42,7 +42,7 @@ namespace FoodWeb.Controllers
                     user.Phone = model.Phone;
                     user.Email = model.Email;
                     user.Address = model.Address;
-                    user.CreatedDate = DateTime.Now;
+                    user.CreateDate = DateTime.Now;
                     var result = dao.Insert(user);
                     if (result > 0)
                     {

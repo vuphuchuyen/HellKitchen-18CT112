@@ -31,7 +31,7 @@ namespace FoodWeb.Model
         public string Email { set; get; }
         [Display(Name="Số điện thoại")]
         [Required(ErrorMessage ="Số điện thoại không được bỏ trống!")]
-        public string Phone { set; get; }
+        public int Phone { set; get; }
         
     }
 }

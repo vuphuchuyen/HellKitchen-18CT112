@@ -9,7 +9,7 @@ namespace Models.EF
     public partial class HellkitchenDbContext : DbContext
     {
         public HellkitchenDbContext()
-            : base("name=HellkitchenDbContext2")
+            : base("name=HellkitchenDbContext")
         {
         }
 
@@ -17,6 +17,7 @@ namespace Models.EF
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<User>()
                 .Property(e => e.UserName)
                 .IsUnicode(false);
@@ -24,10 +25,6 @@ namespace Models.EF
             modelBuilder.Entity<User>()
                 .Property(e => e.Password)
                 .IsUnicode(false);
-
-           
         }
-
-       
     }
 }

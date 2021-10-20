@@ -1,36 +1,37 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.Spatial;
 namespace Models.EF
 {
-   
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
-    [Table("User")]
     public partial class User
     {
-        public long ID { get; set; }
+        public int ID { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string UserName { get; set; }
 
-        [StringLength(32)]
+        [Required]
+        [StringLength(50)]
         public string Password { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Name { get; set; }
 
-        [StringLength(50)]
+        [StringLength(100)]
         public string Address { get; set; }
 
         [StringLength(50)]
         public string Email { get; set; }
 
-        [StringLength(50)]
-        public string Phone { get; set; }
+        public int? Phone { get; set; }
 
-        public DateTime? CreatedDate { get; set; }
+        public DateTime? CreateDate { get; set; }
 
+        public bool? Admin { get; set; }
     }
 }

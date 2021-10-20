@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace FoodWeb.Areas.ADmin
+namespace FoodWeb.Controllers
 {
     public class ADminAreaRegistration : AreaRegistration 
     {

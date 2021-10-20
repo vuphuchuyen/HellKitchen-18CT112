@@ -140,11 +140,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Areas\ADmin\ADminAreaRegistration.cs" />
-    <Compile Include="Areas\ADmin\Controllers\BaseController.cs" />
-    <Compile Include="Areas\ADmin\Controllers\HomeadminController.cs" />
-    <Compile Include="Areas\ADmin\Controllers\LoginController.cs" />
-    <Compile Include="Areas\ADmin\Models\LoginModel.cs" />
+    <Compile Include="Controllers\ADminAreaRegistration.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Model\LoginModel.cs" />
     <Compile Include="Common\Commonstants.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -156,9 +155,9 @@
     <Compile Include="Common\UserLogin.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Assets\css\styles.css" />
-    <Content Include="Areas\Assets\js\datatables-simple-demo.js" />
-    <Content Include="Areas\Assets\js\scripts.js" />
+    <Content Include="css\login.css" />
+    <Content Include="js\datatables-simple-demo.js" />
+    <Content Include="js\scripts.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -216,10 +215,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\Amble-Light-webfont.ttf" />
-    <Content Include="Areas\ADmin\Views\web.config" />
-    <Content Include="Areas\ADmin\Views\Shared\_Layoutad.cshtml" />
-    <Content Include="Areas\ADmin\Views\Homeadmin\Index.cshtml" />
-    <Content Include="Areas\ADmin\Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -251,9 +247,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\ADmin\Data\" />
-    <Folder Include="Areas\ADmin\Views\Base\" />
-    <Folder Include="Areas\ADmin\Views\Home\" />
     <Folder Include="Views\Addmin\" />
   </ItemGroup>
   <ItemGroup>

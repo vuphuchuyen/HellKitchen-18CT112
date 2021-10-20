@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace FoodWeb.Areas.ADmin.Controllers
+namespace FoodWeb.Controllers
 {
     public class LoginController : Controller
     {
@@ -29,7 +29,7 @@ namespace FoodWeb.Areas.ADmin.Controllers
                     userSession.UserName = user.UserName;
                     userSession.UserID = user.ID;
                     Session.Add(Commonstants.USER_SESSION, userSession);
-                    return RedirectToAction("Index", "Homeadmin");
+                    return RedirectToAction("Index", "Home");
                 }
                 else if (result == 0)
                 {
@@ -44,7 +44,7 @@ namespace FoodWeb.Areas.ADmin.Controllers
                     ModelState.AddModelError("", "đăng nhập không đúng ");
                 }
             }
-            return View("Index");
+            return View("Login");
         }
     }
 }

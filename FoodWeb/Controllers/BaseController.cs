@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace FoodWeb.Areas.ADmin.Controllers
+namespace FoodWeb.Controllers
 {
     public class BaseController : Controller
     {
@@ -18,7 +18,7 @@ namespace FoodWeb.Areas.ADmin.Controllers
             if(session == null )
             {
                 filterContext.Result = new RedirectToRouteResult(new
-                    RouteValueDictionary(new { Controller = "Login", action = "Index", Areas = "Admin" }));
+                    RouteValueDictionary(new { Controller = "Users", action = "Index" }));
             }
             base.OnActionExecuting(filterContext);
             
