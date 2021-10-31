@@ -1,0 +1,219 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href='//fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+    <!--slider-->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+    <script src="js/modernizr.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+    <!-- FlexSlider - Dùng để chuyển Slide hình -->
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="total">
+
+            <div class="menu">
+                <div class="top-nav">
+                    <ul>
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Food", "Food", "Food", new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Contact", new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("About us", "About", "About", new { @class = "nav-link" })</li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li><img src="~/images/banner1.jpg" alt="" /></li>
+                        <li><img src="~/images/banner2.jpg" alt="" /></li>
+                        <li><img src="~/images/banner3.jpg" alt="" /></li>
+                        <li><img src="~/images/banner4.jpg" alt="" /></li>
+                    </ul>
+                </div>
+                <div class="flex-caption">
+
+                    <a href=""> </a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="content-top">
+                    <div class="col_1_of_5 span_1_of_5">
+                        <div class="hover_img">
+                            <img src="~/images/pic.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="col_1_of_5 span_1_of_5">
+                        <div class="hover_img">
+                            <img src="~/images/pic1.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="col_1_of_5 span_1_of_5">
+                        <div class="hover_img">
+                            <img src="~/images/pic2.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="col_1_of_5 span_1_of_5">
+                        <div class="hover_img">
+                            <img src="~/images/pic3.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="col_1_of_last span_1_of_5">
+                        <h3><span class="red">[ADMIN] Giới thiệu</span><br><span class="black"> Một số loại món</span></h3>
+                        <p>Hãy cảm nhận thức ăn bằng toàn bộ giác quan , không chỉ ở gia vị</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="content-middle">
+                    <div class="col_1_of_2 span_1_of_2">
+                        <h3><span class="red">Các dạng Order hàng</span><br><span class="black">Sự đa năng</span></h3>
+                        <p>Mọi người có thể dừng trên đa phần các cửa hàng , Shop hay cả các quán ăn vặt trên đường , trừ việc ăn tại chỗ, họ đều có khả năng gói đồ ăn cho các bạn mang về nếu cần thiết</p>
+                        <p>Vì dịch bệnh Covid-19 đang diễn biến phức tạp , khuyên cáo mọi người hãy gọi điện thoại cho cửa hàng uy tín , đăng ký địa chỉ và một số thông tin cá nhân để họ giao thức ăn đến tận nhà. Và hãy trả trước một phần tiền để tránh bom hàng.</p>
+                        <button class="btn1 btn-8 btn-8a">Read More</button>
+                    </div>
+                    <div class="col_1_of_2 span_1_of_2">
+                        <div class="grid_img">
+                            <div class="hover_img">
+                                <img src="~/images/pic4.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="banner2">
+                            <a href="#">
+                                <div class="price">10K</div>
+                                <strong>Free Shipping</strong>
+                                *Giá áp dụng cho món ăn
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="content-bottom">
+                    <div class="col_1_of_3 span_1_of_3">
+                        <img src="~/images/pic5.jpg" alt="" />
+                        <div class="bottom-head"><h5>Đồ uống , tráng miệng</h5></div>
+                        <div class="but">
+                            <button class="btn1 btn-8 btn-8a">Read More</button>
+                        </div>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <img src="~/images/pic6.jpg" alt="" />
+                        <div class="bottom-head"><h5>Món ăn Healthy và Balance</h5></div>
+                        <div class="but">
+                            <button class="btn1 btn-8 btn-8a">Read More</button>
+                        </div>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <img src="~/images/pic7.jpg" alt="" />
+                        <div class="bottom-head"><h5>Bánh kẹo và ăn vặt</h5></div>
+                        <div class="but">
+                            <button class="btn1 btn-8 btn-8a">Read More</button>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+
+
+
+                    <div class="subbot"> <a> Các đầu bếp nổi tiếng</a></div>
+
+
+
+                    <div class="content-bottom">
+                        <div class="col_1_of_3 span_1_of_3">
+
+                            <img src="~/images/ramsay.jpg" alt="" />
+                            <div class="bottom-head"><h5 style="color: darkblue">Gordon Ramsay</h5></div>
+                            <div class="but">
+                                <button class="btn1 btn-8 btn-8a">Read More</button>
+                            </div>
+                        </div>
+                        <div class="col_1_of_3 span_1_of_3">
+
+                            <img src="~/images/christinaHa.jpg" alt="" />
+                            <div class="bottom-head"><h5 style="color: seagreen">Christina Hà</h5></div>
+                            <div class="but">
+                                <button class="btn1 btn-8 btn-8a">Read More</button>
+                            </div>
+                        </div>
+                        <div class="col_1_of_3 span_1_of_3">
+                            <img src="~/images/Morimoto.jpg" alt="" />
+                            <div class="bottom-head"><h5>Morimoto Masaharu</h5></div>
+                            <div class="but">
+                                <button class="btn1 btn-8 btn-8a">Read More</button>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="content-last">
+                        <div class="col_1_of_4 span_1_of_4">
+                            <img src="~/images/glass.png" alt="" />
+                            <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Nguồn tin cậy</h3>
+                            <p>Thông tin thức ăn , đồ uống hay các đầu bếp ,thường được chúng tôi chọn lọc qua nhiều nguồn khác nhau để đem cho mọi người thông tin chính xác và dễ hiểu nhất </p>
+
+                        </div>
+                        <div class="col_1_of_4 span_1_of_4">
+                            <img src="~/images/plate.png" alt="" />
+                            <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Chất lượng </h3>
+                            <p>Những công thức món ăn , thức uống hay những thức ăn chúng tôi giới thiệu cho các bạn , đều là những thứ đã được lấy từ nhiều người bình chọn, thích , chia sẻ từ các trang mạng xã hội ( như facebook , twitter , instagram,...)</p>
+
+                        </div>
+                        <div class="col_1_of_4 span_1_of_4">
+                            <img src="~/images/icecream.png" alt="" />
+                            <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Đơn giản và hiệu quả</h3>
+                            <p>Những công thức , miêu tả , thông tin đã được đơn giản hóa vừa đủ để mọi người có thể hiểu . Kể cả những video dạy làm thức ăn , chúng tôi cũng đã chọn ra những video từ cơn bản đến nâng cao , để người xem có thể trải nghiệm và học hỏi dần</p>
+
+                        </div>
+                        <div class="col_1_of_4 span_1_of_4">
+                            <img src="~/images/leaf.png" alt="" />
+                            <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Phù hợp </h3>
+                            <p>Trong những thông tin , video , trang web của chúng tôi đều phù hợp với các độ tuổi . Không có thông tin sai lệch , chính trị , nói xấu , xúc phạm hay những video cấm , sai đề tài . Trang web chúng tôi luôn chia sẻ chỉ về chủ đề liên quan ăn uống và các đầu bếp . Không hơn không kém</p>
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="wrap">
+            <div class="copy">
+                <p>  </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

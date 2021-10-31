@@ -149,7 +149,8 @@ body {
 	padding-bottom: 2%;
 }
 .logo{
-	float:left;
+	padding-left: 30%;
+	position:absolute;
 }
 .header-bot{
 	padding: 1% 0;
