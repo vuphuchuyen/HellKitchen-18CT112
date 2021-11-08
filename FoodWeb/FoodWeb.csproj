@@ -145,6 +145,7 @@
     <Compile Include="Controllers\ADminAreaRegistration.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Model\LoginModel.cs" />
     <Compile Include="Common\Commonstants.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -158,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\login.css" />
+    <Content Include="images\lhu.png" />
     <Content Include="js\datatables-simple-demo.js" />
     <Content Include="js\scripts.js" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -250,6 +252,15 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\Product\FoodDetail1.cshtml" />
+    <Content Include="Views\Product\FoodDetail2.cshtml" />
+    <Content Include="Views\Product\FoodDetail3.cshtml" />
+    <Content Include="Views\Product\FoodDetail4.cshtml" />
+    <Content Include="Views\Product\FoodDetail5.cshtml" />
+    <Content Include="Views\Product\FoodDetail6.cshtml" />
+    <Content Include="Views\Product\FoodDetail7.cshtml" />
+    <Content Include="Views\Product\FoodDetail8.cshtml" />
+    <Content Include="Views\Product\FoodDetail9.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
