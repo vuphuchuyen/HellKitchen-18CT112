@@ -4,7 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace FoodWeb.Areas.ADmin.Models
+namespace FoodWeb.Model
+
 {
     public class LoginModel
     {
