@@ -1,7 +1,5 @@
 ﻿@model FoodWeb.Model.RegisterModel
-@{
-    Layout = null;
-}
+@{ Layout = null; }
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,108 +29,118 @@
     <div class="container">
 
         <!-- Outer Row -->
-        <div class="row justify-content-center">
+        <div class="container">
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-5 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-7">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Tạo tài khoản</h1>
+                                    <hr>
+                                </div>
+                                @using (Html.BeginForm())
+                                {
+                    <form class="user">
+                        @Html.AntiForgeryToken()
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="form-group">
-                                        <h4>Đăng Ký Thành Viên</h4>
-                                        </div>
-                                        <hr>
-                                        @using (Html.BeginForm("Index", "Register", FormMethod.Post))
-                                        {
-                                            @Html.AntiForgeryToken()
+                        <div class="form-group">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            @if (ViewBag.Success != null)
+                            {
+            <div class="alert alert-success">@ViewBag.Success</div>}
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <div>Tên đăng nhập</div>
+                                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control form-control-user" })
+                                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div>Họ tên</div>
+                                <div>
+                                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control form-control-user" })
+                                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div>Mật khẩu</div>
+
+                            @Html.PasswordFor(model => model.Password, new { @class = "form-control form-control-user" })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group">
+                            <div>Xác nhận mật khẩu</div>
+
+                            @Html.PasswordFor(model => model.confirmPassword, new { @class = "form-control form-control-user" })
+                            @Html.ValidationMessageFor(model => model.confirmPassword, "", new { @class = "text-danger" })
+
+                        </div>
 
 
-                                            <div class="form-group">
 
-                                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                                                @if (ViewBag.Success != null)
-                                                {
-                                                    <div class="alert alert-success">@ViewBag.Success</div>
-                                                }
-                                            </div>
-                                            <div class="form-group">
-                                                <div>Tên đăng nhập</div>
-                                                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control form-control-user" })
-                                                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
-                                            </div>
+                        <div class="form-group ">
+                            <div>Địa chỉ</div>
+                            @Html.TextAreaFor(model => model.Address, new { @class = "form-control form-control-user" })
+                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
 
-                                            <div class="form-group">
-                                                <div>Mật khẩu</div>
+                        </div>
 
-                                                @Html.PasswordFor(model => model.Password, new { @class = "form-control form-control-user" })
-                                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <div>Email</div>
 
-                                            </div>
+                                @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user" })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-sm-6">
+                                <div>Số điện thoại</div>
+                                @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-control-user" })
+                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
 
-                                            <div class="form-group">
-                                                <div>Xác nhận mật khẩu</div>
+                            </div>
+                        </div>
 
-                                                @Html.PasswordFor(model => model.confirmPassword, new { @class = "form-control form-control-user" })
-                                                @Html.ValidationMessageFor(model => model.confirmPassword, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            <input type="submit" value="Đăng ký" class="btn btn-primary btn-user btn-block">
+                        </div>
 
-                                            </div>
+                        <hr>
+                        <a href="#" class="btn btn-google btn-user btn-block">
+                            <i class="fab fa-google fa-fw"></i> Đăng ký với Google
+                        </a>
+                        <a href="#" class="btn btn-facebook btn-user btn-block">
+                            <i class="fab fa-facebook-f fa-fw"></i> Đăng ký với Facebook
+                        </a>
+                    </form>}
 
-                                            <div class="form-group">
-                                                <div>Họ tên</div>
-
-                                                @Html.TextBoxFor(model => model.Name, new { @class = "form-control form-control-user" })
-                                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-
-                                            </div>
-
-                                            <div class="form-group">
-                                                <div>Địa chỉ</div>
-                                                @Html.TextAreaFor(model => model.Address, new { @class = "form-control form-control-user" })
-                                                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
-
-                                            </div>
-
-                                            <div class="form-group">
-                                                <div>Email</div>
-
-                                                @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user" })
-                                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-
-                                            </div>
-
-                                            <div class="form-group">
-                                                <div>Số điện thoại</div>
-
-                                                @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-control-user" })
-                                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
-
-                                            </div>
-
-                                            <div class="form-group">
-                                                <button type="submit" class="btn btn-primary btn-user btn-block">
-                                                    Đăng ký
-                                                </button>
-                                            </div>
-                                        
-                                    }
-                                    
-                                    
+                                <hr>
+                                <div class="text-center">
+                                    <a class="small" href="forgot-password.html">
+                                        Quên mật khẩu?
+                                    </a>
+                                </div>
+                                <div class="text-center">
+                                    <a class="small" href="https://localhost:44316/Admin/Login">
+                                        Đã có tài khoản rồi sao? Đăng nhập nào!
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
 
         </div>
-
     </div>
-
     <!-- Bootstrap core JavaScript-->
     <script src="~/Assets/Admin/vendor/jquery/jquery.min.js"></script>
     <script src="~/Assets/Admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

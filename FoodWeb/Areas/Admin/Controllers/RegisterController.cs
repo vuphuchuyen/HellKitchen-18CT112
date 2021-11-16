@@ -14,11 +14,14 @@ namespace FoodWeb.Areas.Admin.Controllers
     public class RegisterController : Controller
     {
         // GET: Admin/Register
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Register(RegisterModel model)
+
+        [HttpPost]
+        public ActionResult Index(RegisterModel model)
         {
             if (ModelState.IsValid)
             {
