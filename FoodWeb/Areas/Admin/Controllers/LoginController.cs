@@ -12,6 +12,7 @@ namespace FoodWeb.Areas.Admin.Controllers
 {
     public class LoginController : Controller
     {
+        
         // GET: Admin/Login
         public ActionResult Index()
         {
@@ -29,8 +30,9 @@ namespace FoodWeb.Areas.Admin.Controllers
                     var userSession = new UserLogin();
                     userSession.UserName = user.UserName;
                     userSession.UserID = user.ID;
+                    
                     Session.Add(Commonstants.USER_SESSION, userSession);
-
+                    
                     return RedirectToAction("Index", "Dashboard");
 
                 }

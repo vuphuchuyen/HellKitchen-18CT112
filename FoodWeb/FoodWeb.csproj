@@ -143,12 +143,12 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RegisterController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Model\LoginModel.cs" />
     <Compile Include="Common\Commonstants.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2078,6 +2078,7 @@
     <Content Include="Assets\Admin\vendor\jquery\jquery.slim.min.map" />
     <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Register\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2105,7 +2106,6 @@
     <Content Include="Views\Home\Food.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\User\Register.cshtml" />
     <Content Include="Views\Product\FoodDetail1.cshtml" />
     <Content Include="Views\Product\FoodDetail2.cshtml" />
     <Content Include="Views\Product\FoodDetail3.cshtml" />

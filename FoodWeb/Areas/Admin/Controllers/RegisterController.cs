@@ -1,25 +1,27 @@
-﻿using FoodWeb.Model;
-using Models.DAO;
-using Models.EF;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using FoodWeb.Model;
+using FoodWeb.Common;
+using Models.DAO;
+using Models.EF;
 
-namespace FoodWeb.Controllers
+namespace FoodWeb.Areas.Admin.Controllers
 {
-    public class UserController : Controller
+    public class RegisterController : Controller
     {
-        // GET: User
+        // GET: Admin/Register
         [HttpGet]
-        public ActionResult Register()
+        public ActionResult Index()
         {
             return View();
         }
+
         [HttpPost]
-        public ActionResult Register(RegisterModel model)
+        public ActionResult Index(RegisterModel model)
         {
             if (ModelState.IsValid)
             {
@@ -28,7 +30,8 @@ namespace FoodWeb.Controllers
                 {
                     ModelState.AddModelError("", "Tên đăng nhập đã tồn tại");
 
-                }else if (dao.Checkemai(model.Email))
+                }
+                else if (dao.Checkemai(model.Email))
                 {
                     ModelState.AddModelError("", "Email đã tồn tại");
 
@@ -58,5 +61,6 @@ namespace FoodWeb.Controllers
             }
             return View(model);
         }
+
     }
 }
