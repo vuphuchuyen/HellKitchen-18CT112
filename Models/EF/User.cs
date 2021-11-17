@@ -32,6 +32,6 @@ namespace Models.EF
 
         public DateTime? CreateDate { get; set; }
 
-        public bool? Admin { get; set; }
+        public string Role { get; set; }
     }
 }
