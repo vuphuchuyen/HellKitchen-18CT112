@@ -146,7 +146,12 @@
     <Compile Include="Areas\Admin\Controllers\RegisterController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CategoryFoodController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Model\BasicFoodDb.cs" />
+    <Compile Include="Model\CategoryFood.cs" />
+    <Compile Include="Model\CategoryFoodDb.cs" />
+    <Compile Include="Model\Database.cs" />
     <Compile Include="Model\LoginModel.cs" />
     <Compile Include="Common\Commonstants.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2122,6 +2127,12 @@
     <Content Include="Views\Product\FoodDetail7.cshtml" />
     <Content Include="Views\Product\FoodDetail8.cshtml" />
     <Content Include="Views\Product\FoodDetail9.cshtml" />
+    <Content Include="Views\CategoryFood\Index.cshtml" />
+    <Content Include="Views\CategoryFood\Create.cshtml" />
+    <Content Include="Views\CategoryFood\Delete.cshtml" />
+    <Content Include="Views\CategoryFood\Details.cshtml" />
+    <Content Include="Views\CategoryFood\Edit.cshtml" />
+    <Content Include="Views\Home\CategoryFood.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
