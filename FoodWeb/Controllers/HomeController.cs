@@ -33,11 +33,6 @@ namespace FoodWeb.Controllers
 
             return View();
         }
-        public ActionResult CategoryFood()
-        {
-            ViewBag.Message = "Food Category";
-
-            return View();
-        }
+        
     }
 }

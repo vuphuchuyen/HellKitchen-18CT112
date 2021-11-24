@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace FoodWeb.Controllers
+namespace FoodWeb.Areas.Admin.Controllers
 {
     public class CategoryFoodController : Controller
     {

@@ -1,15 +1,15 @@
-﻿@using FoodWeb.Model;
+﻿
 @model IEnumerable<FoodWeb.Model.CategoryFood>
 
 @{
-    ViewBag.Title = "Index";
+    
 
 }
 
-<h2>Index</h2>
+<h2>Danh sách Food</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Tạo mới", "Create")
 </p>
 <table class="table">
     <tr>
@@ -56,9 +56,9 @@
                 @(item.Status?"Đang sử dụng":"đã xóa")
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.ID })
             </td>
         </tr>
     }
