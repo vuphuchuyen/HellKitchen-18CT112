@@ -94,7 +94,7 @@ namespace FoodWeb.Areas.Admin.Controllers
         public ActionResult Delete(int id)
         {
             var category = new CategoryFoodDb().GetCategoryByID(ref err, id);
-            return View();
+            return View(category);
         }
 
         // POST: CategoryFood/Delete/5
